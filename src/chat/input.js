@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Input = ({ value, onChange, onEnter }) => (
   <div className="input-field">
@@ -10,7 +11,8 @@ const Input = ({ value, onChange, onEnter }) => (
       onKeyUp={e =>
         e.keyCode === 13 && value ? onEnter(e.target.value) : null}
     />
-    <input onClick={event => console.log(event.target.value)} value="hi" />
+    <Link to="/chat/quintin">Chat with Quintin</Link>
+
   </div>
 );
 

@@ -10,7 +10,7 @@ export default class Container extends React.Component {
 
   render() {
     let { messages, value } = this.state;
-    console.log('rendered');
+
     return (
       <div>
         <Messages messages={messages} />
