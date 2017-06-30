@@ -1,15 +1,16 @@
-import React from "react";
-import Input from "./input";
-import Messages from "./messages";
+import React from 'react';
+import Input from './input';
+import Messages from './messages';
 
 export default class Container extends React.Component {
   constructor() {
     super();
-    this.state = { messages: [], value: "" };
+    this.state = { messages: [], value: '' };
   }
 
   render() {
     let { messages, value } = this.state;
+    console.log('rendered');
     return (
       <div>
         <Messages messages={messages} />
@@ -17,7 +18,7 @@ export default class Container extends React.Component {
           value={value}
           onChange={value => this.setState({ value })}
           onEnter={value =>
-            this.setState({ messages: [...messages, value], value: "" })}
+            this.setState({ messages: [...messages, value], value: '' })}
         />
       </div>
     );

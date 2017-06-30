@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-const Input = ({ value, onChange, onEnter }) =>
+const Input = ({ value, onChange, onEnter }) => (
   <div className="input-field">
     <input
       value={value}
@@ -8,8 +8,10 @@ const Input = ({ value, onChange, onEnter }) =>
       type="text"
       onChange={e => onChange(e.target.value)}
       onKeyUp={e =>
-        e.keyCode === 13 && value !== "" ? onEnter(e.target.value) : null}
+        e.keyCode === 13 && value ? onEnter(e.target.value) : null}
     />
-  </div>;
+    <input onClick={event => console.log(event.target.value)} value="hi" />
+  </div>
+);
 
 export default Input;

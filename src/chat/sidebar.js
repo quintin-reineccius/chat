@@ -1,14 +1,29 @@
-import React from "react";
+import React from 'react';
 
-const Sidebar = ({ chatrooms }) =>
-  <ul className="sidebar">
-    {chatrooms.map((chatroom, index) =>
-      <li key={index} className="chatroom">
-        <div>
-          {chatroom}
-        </div>
-      </li>
-    )}
-  </ul>;
+export default class Sidebar extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      chatrooms: ['Zachs Chat', 'XBox Chat', 'Girls Girls Girls'],
+    };
+  }
 
-export default Sidebar;
+  componentDidMount() {
+    setTimeout(() => this.setState({ chatrooms: ['test'] }), 2000);
+  }
+
+  render() {
+    let { chatrooms } = this.state;
+    return (
+      <ul className="sidebar">
+        {chatrooms.map((chatroom, index) => (
+          <li key={index} className="chatroom">
+            <div>
+              {chatroom}
+            </div>
+          </li>
+        ))}
+      </ul>
+    );
+  }
+}
