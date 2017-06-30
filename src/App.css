@@ -1,0 +1,35 @@
+ul {
+  list-style: none;
+  padding: 5px;
+}
+
+.input-field {
+  padding: 10px;
+  background-color: rgba(128, 128, 128, 0.34);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.input-field input {
+  border-radius: 25px;
+  outline: none;
+}
+
+.App {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar {
+  width: 15%;
+  margin: 0;
+  background-color: #607d8b;
+  height: 100%;
+}
+
+.chatroom {
+  padding: 10px;
+  background-color: rgba(3, 169, 244, 0.46);
+  margin: 2px;
+}
